@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F95E237C8D5800A1B976 /* AppDelegate.swift */; };
-		DD41F961237C8D5800A1B976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F960237C8D5800A1B976 /* ViewController.swift */; };
 		DD41F963237C8D5C00A1B976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD41F962237C8D5C00A1B976 /* Assets.xcassets */; };
 		DD41F966237C8D5C00A1B976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41F964237C8D5C00A1B976 /* Main.storyboard */; };
 		DD41F985237C911A00A1B976 /* NoiseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F983237C911A00A1B976 /* NoiseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		DD41F95B237C8D5800A1B976 /* NoiseBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoiseBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41F95E237C8D5800A1B976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD41F960237C8D5800A1B976 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD41F962237C8D5C00A1B976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD41F965237C8D5C00A1B976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD41F967237C8D5C00A1B976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 		DD41F9A1237C9CEE00A1B976 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD41F960237C8D5800A1B976 /* ViewController.swift */,
 				DD41F9A6237C9D8100A1B976 /* NoiseControlTouchBarController.swift */,
 				DDE6D813237CA05D009BE951 /* Preferences.swift */,
 			);
@@ -326,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD41F961237C8D5800A1B976 /* ViewController.swift in Sources */,
 				DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */,
 				DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */,
 				DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */,
