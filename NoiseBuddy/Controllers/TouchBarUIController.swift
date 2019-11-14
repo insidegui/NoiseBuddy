@@ -39,6 +39,14 @@ final class TouchBarUIController: NoiseControlUIController {
         DFRElementSetControlStripPresenceForIdentifier(.noiseControl, shouldShow(for: currentDevice))
     }
 
+    override func toggleNoiseControlMode(_ sender: Any) {
+        let nextMode = preferences.nextListeningMode(from: listeningModeController.listeningMode)
+
+        listeningModeController.listeningMode = nextMode
+
+        button.image = nextMode.touchBarImage
+    }
+
     override func handleListeningModeDidChange(_ device: NCDevice) {
         button.image = device.listeningMode.touchBarImage
     }
