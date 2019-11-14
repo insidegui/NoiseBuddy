@@ -9,5 +9,12 @@ You can customize where the button will appear by launching the app and changing
 ![screenshot-menubar](./screenshots/screenshot-menubar.png)
 ![screenshot-touchbar](./screenshots/screenshot-touchbar.png)
 
+## Installing
+
+**Requires macOS Catalina**.
+
+Download the [latest release](https://github.com/insidegui/NoiseBuddy/releases) or build from source.
+**Note: since the app is not notarized, you'll need to right-click and select "Open" to be able to launch it.**
+
 _AirPods, Touch Bar and Beats Solo Pro are trademarks of Apple Inc., registered in the U.S. and other countries. This app is not made by, affiliated with or endorsed by Apple._
 
