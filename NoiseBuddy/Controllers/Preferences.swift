@@ -11,9 +11,9 @@ import NoiseCore
 
 final class Preferences {
 
-    private let defaults: UserDefaults
+    static let didChangeNotification = Notification.Name("codes.rambo.NoiseBuddy.PrefsChanged")
 
-    static let shared = Preferences()
+    private let defaults: UserDefaults
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -24,8 +24,24 @@ final class Preferences {
             "listeningModes": [
                 NCListeningMode.anc.rawValue,
                 NCListeningMode.transparency.rawValue
-            ]
+            ],
+            "menuBarEnabled": true,
+            "touchBarEnabled": true
         ])
+
+        NotificationCenter.default.addObserver(forName: UserDefaults.didChangeNotification, object: defaults, queue: .main) { [weak self] _ in
+            NotificationCenter.default.post(name: Self.didChangeNotification, object: self)
+        }
+    }
+
+    var menuBarEnabled: Bool {
+        get { defaults.bool(forKey: #function) }
+        set { defaults.set(newValue, forKey: #function) }
+    }
+
+    var touchBarEnabled: Bool {
+        get { defaults.bool(forKey: #function) }
+        set { defaults.set(newValue, forKey: #function) }
     }
 
     var listeningModes: [NCListeningMode] {

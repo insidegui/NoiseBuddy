@@ -19,8 +19,7 @@ final class NoiseControlTouchBarController: NSObject {
     let listeningModeController: NCListeningModeStatusProvider
     let item: NSCustomTouchBarItem
 
-    init(listeningModeController: NCListeningModeStatusProvider,
-         preferences: Preferences = .shared)
+    init(listeningModeController: NCListeningModeStatusProvider, preferences: Preferences)
     {
         self.listeningModeController = listeningModeController
         self.preferences = preferences
@@ -49,21 +48,35 @@ final class NoiseControlTouchBarController: NSObject {
         }
 
         listeningModeController.startListeningForUpdates()
+
+        NotificationCenter.default.addObserver(forName: Preferences.didChangeNotification, object: preferences, queue: .main) { [weak self] _ in
+            self?.reevaluateVisibility()
+        }
     }
 
+    private func shouldShow(for device: NCDevice?) -> Bool {
+        guard let device = device else { return false }
+        return device.supportsListeningModes && preferences.touchBarEnabled
+    }
+
+    private var currentDevice: NCDevice?
+
     private func handleDeviceDidChange(_ device: NCDevice?) {
-        guard let device = device else {
-            DFRElementSetControlStripPresenceForIdentifier(.noiseControl, false)
-            return
-        }
+        defer { reevaluateVisibility() }
+
+        currentDevice = device
+
+        guard let device = device else { return }
 
         handleListeningModeDidChange(device)
         
         device.listeningModeDidChange = { [weak self] inDevice in
             self?.handleListeningModeDidChange(inDevice)
         }
+    }
 
-        DFRElementSetControlStripPresenceForIdentifier(.noiseControl, device.supportsListeningModes)
+    private func reevaluateVisibility() {
+        DFRElementSetControlStripPresenceForIdentifier(.noiseControl, shouldShow(for: currentDevice))
     }
 
     private func handleListeningModeDidChange(_ device: NCDevice) {

@@ -20,12 +20,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }()
 
+    private lazy var preferences = Preferences()
+
     private lazy var touchBarController: NoiseControlTouchBarController = {
-        NoiseControlTouchBarController(listeningModeController: self.listeningModeController)
+        NoiseControlTouchBarController(
+            listeningModeController: self.listeningModeController,
+            preferences: self.preferences
+        )
     }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        Preferences.shared.register()
+        preferences.register()
 
         touchBarController.install()
     }
