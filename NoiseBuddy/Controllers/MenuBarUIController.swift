@@ -40,4 +40,31 @@ final class MenuBarUIController: NoiseControlUIController {
         item?.button?.image = device.listeningMode.menuBarImage
     }
 
+    override func handleDeviceDidChange(_ device: NCDevice?) {
+        super.handleDeviceDidChange(device)
+        
+        item?.button?.toolTip = currentDevice?.tooltip
+    }
+
+}
+
+extension NCDevice {
+    var tooltip: String? {
+        guard supportsListeningModes else { return nil }
+
+        return "NoiseBuddy: \(name) (\(listeningMode.title))"
+    }
+}
+
+extension NCListeningMode {
+    var title: String {
+        switch self {
+        case .normal:
+            return "Normal"
+        case .anc:
+            return "Noise Cancelling"
+        case .transparency:
+            return "Transparency"
+        }
+    }
 }

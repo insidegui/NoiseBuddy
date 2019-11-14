@@ -49,7 +49,7 @@ class NoiseControlUIController: NSObject {
 
     private(set) var currentDevice: NCDevice?
 
-    private func handleDeviceDidChange(_ device: NCDevice?) {
+    func handleDeviceDidChange(_ device: NCDevice?) {
         defer { reevaluateVisibility() }
 
         currentDevice = device

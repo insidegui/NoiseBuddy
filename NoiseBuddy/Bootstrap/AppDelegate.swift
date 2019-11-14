@@ -48,12 +48,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    private lazy var preferencesController: NSWindowController = {
+    private func makePreferencesController() -> NSWindowController {
         PreferencesViewController.instantiate(with: self.preferences).0
-    }()
+    }
+
+    private var preferencesController: NSWindowController?
 
     @IBAction func showPreferences(_ sender: Any) {
-        preferencesController.showWindow(sender)
+        preferencesController = makePreferencesController()
+
+        preferencesController?.showWindow(sender)
         NSApp.activate(ignoringOtherApps: false)
     }
 

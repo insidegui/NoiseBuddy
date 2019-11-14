@@ -33,6 +33,16 @@ class PreferencesViewController: NSViewController {
         return (windowController, controller)
     }
 
+    private var isDFRAvailable: Bool {
+        NSFunctionRow.isDynamicFunctionRowAvailable() && !UserDefaults.standard.bool(forKey: "NBSimulateDFRNotAvailable")
+    }
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+
+        touchBarEnabledButton.isHidden = !isDFRAvailable
+    }
+
     override func viewDidAppear() {
         super.viewDidAppear()
 

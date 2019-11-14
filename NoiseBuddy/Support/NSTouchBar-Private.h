@@ -8,6 +8,10 @@
 
 @import Cocoa;
 
+@interface NSFunctionRow: NSObject
++ (BOOL)isDynamicFunctionRowAvailable;
+@end
+
 extern void DFRElementSetControlStripPresenceForIdentifier(NSTouchBarItemIdentifier, BOOL);
 extern void DFRSystemModalShowsCloseBoxWhenFrontMost(BOOL);
 

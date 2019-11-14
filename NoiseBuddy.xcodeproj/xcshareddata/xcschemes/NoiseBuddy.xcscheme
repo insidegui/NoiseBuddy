@@ -53,11 +53,15 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-NBUseMockListeningModeController YES"
-            isEnabled = "YES">
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-NBSimulateDFRNotAvailable YES"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-NBShowPreferences YES"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>

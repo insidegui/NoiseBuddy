@@ -58,7 +58,7 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-Ie-FqK">
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="750" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-Ie-FqK">
                                 <rect key="frame" x="20" y="20" width="262" height="61"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-y9-LcD" customClass="ActionLabel" customModule="NoiseBuddy" customModuleProvider="target">
@@ -173,7 +173,7 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I1O-Ie-FqK" secondAttribute="trailing" constant="20" symbolic="YES" id="65W-Yy-2W3"/>
                             <constraint firstItem="Ymr-0e-7eJ" firstAttribute="top" secondItem="zvt-e0-aNC" secondAttribute="top" constant="20" symbolic="YES" id="K98-Qj-JVE"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ymr-0e-7eJ" secondAttribute="trailing" constant="20" symbolic="YES" id="Sq8-TA-Zgb"/>
-                            <constraint firstItem="I1O-Ie-FqK" firstAttribute="top" secondItem="Ymr-0e-7eJ" secondAttribute="bottom" constant="59" id="fX8-cd-Xsy"/>
+                            <constraint firstItem="I1O-Ie-FqK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ymr-0e-7eJ" secondAttribute="bottom" constant="42" id="fX8-cd-Xsy"/>
                             <constraint firstItem="I1O-Ie-FqK" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" id="jo8-KS-Orf"/>
                             <constraint firstAttribute="bottom" secondItem="I1O-Ie-FqK" secondAttribute="bottom" constant="20" id="t5n-tc-GhD"/>
                             <constraint firstItem="Ymr-0e-7eJ" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" symbolic="YES" id="uUb-Rb-0d8"/>
