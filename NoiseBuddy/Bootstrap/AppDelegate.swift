@@ -42,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         touchBarController.install()
         menuBarController.install()
 
-        if !preferences.hasLaunchedBefore {
+        if !preferences.hasLaunchedBefore || UserDefaults.standard.bool(forKey: "NBShowPreferences") {
             preferences.hasLaunchedBefore = true
             showPreferences(self)
         }
