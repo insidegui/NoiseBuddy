@@ -34,6 +34,10 @@ class NoiseControlUIController: NSObject {
         }
 
         listeningModeController.startListeningForUpdates()
+
+        NotificationCenter.default.addObserver(forName: Preferences.didChangeNotification, object: preferences, queue: .main) { [weak self] _ in
+            self?.reevaluateVisibility()
+        }
     }
 
     var isEnabled: Bool { fatalError("Subclasses must override isEnabled and not call super") }

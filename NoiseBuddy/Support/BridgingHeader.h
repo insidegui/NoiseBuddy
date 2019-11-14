@@ -7,3 +7,4 @@
 //
 
 #import "NSTouchBar-Private.h"
+#import "SharedFileList.h"

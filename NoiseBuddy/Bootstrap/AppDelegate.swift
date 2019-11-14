@@ -41,6 +41,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         touchBarController.install()
         menuBarController.install()
+
+        if !preferences.hasLaunchedBefore {
+            preferences.hasLaunchedBefore = true
+            showPreferences(self)
+        }
+    }
+
+    private lazy var preferencesController: NSWindowController = {
+        PreferencesViewController.instantiate(with: self.preferences).0
+    }()
+
+    @IBAction func showPreferences(_ sender: Any) {
+        preferencesController.showWindow(sender)
+        NSApp.activate(ignoringOtherApps: false)
+    }
+
+    private var activationCount = 0
+
+    func applicationDidBecomeActive(_ notification: Notification) {
+        if activationCount > 1 { showPreferences(self) }
+
+        activationCount += 1
     }
 
 }

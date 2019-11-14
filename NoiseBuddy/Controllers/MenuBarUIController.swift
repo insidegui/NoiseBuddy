@@ -26,8 +26,6 @@ final class MenuBarUIController: NoiseControlUIController {
         return i
     }
 
-    private var itemVisibilityObservation: NSKeyValueObservation?
-
     override func configureUI() {
         guard isEnabled, item == nil else { return }
 

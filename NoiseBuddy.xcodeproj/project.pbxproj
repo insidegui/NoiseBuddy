@@ -27,6 +27,10 @@
 		DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */; };
 		DDE6D81C237CDF56009BE951 /* NoiseControlUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */; };
 		DDE6D81E237CE18D009BE951 /* MenuBarUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */; };
+		DDE6D820237CE88F009BE951 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE6D81F237CE88F009BE951 /* Preferences.storyboard */; };
+		DDE6D823237CE981009BE951 /* ActionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D822237CE981009BE951 /* ActionLabel.swift */; };
+		DDE6D825237CEA6C009BE951 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D824237CEA6C009BE951 /* PreferencesViewController.swift */; };
+		DDE6D82C237CED20009BE951 /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D82A237CED20009BE951 /* SharedFileList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,11 @@
 		DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListeningModeController.swift; sourceTree = "<group>"; };
 		DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseControlUIController.swift; sourceTree = "<group>"; };
 		DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarUIController.swift; sourceTree = "<group>"; };
+		DDE6D81F237CE88F009BE951 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		DDE6D822237CE981009BE951 /* ActionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLabel.swift; sourceTree = "<group>"; };
+		DDE6D824237CEA6C009BE951 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		DDE6D828237CED20009BE951 /* SharedFileList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFileList.h; sourceTree = "<group>"; };
+		DDE6D82A237CED20009BE951 /* SharedFileList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFileList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +130,7 @@
 		DD41F95D237C8D5800A1B976 /* NoiseBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				DDE6D821237CE971009BE951 /* Views */,
 				DD41F99F237C9AC500A1B976 /* Bootstrap */,
 				DD41F9A0237C9CCE00A1B976 /* Resources */,
 				DD41F9A2237C9CF400A1B976 /* Support */,
@@ -163,6 +173,7 @@
 			children = (
 				DD41F962237C8D5C00A1B976 /* Assets.xcassets */,
 				DD41F964237C8D5C00A1B976 /* Main.storyboard */,
+				DDE6D81F237CE88F009BE951 /* Preferences.storyboard */,
 				DD41F967237C8D5C00A1B976 /* Info.plist */,
 				DD41F968237C8D5C00A1B976 /* NoiseBuddy.entitlements */,
 			);
@@ -175,7 +186,7 @@
 				DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */,
 				DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */,
 				DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */,
-				DDE6D813237CA05D009BE951 /* Preferences.swift */,
+				DDE6D824237CEA6C009BE951 /* PreferencesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,8 +194,11 @@
 		DD41F9A2237C9CF400A1B976 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				DD41F9A4237C9D0600A1B976 /* NSTouchBar-Private.h */,
 				DD41F9A5237C9D2900A1B976 /* BridgingHeader.h */,
+				DDE6D828237CED20009BE951 /* SharedFileList.h */,
+				DDE6D82A237CED20009BE951 /* SharedFileList.m */,
+				DDE6D813237CA05D009BE951 /* Preferences.swift */,
+				DD41F9A4237C9D0600A1B976 /* NSTouchBar-Private.h */,
 				DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */,
 			);
 			path = Support;
@@ -209,6 +223,14 @@
 				DD41F99D237C98B900A1B976 /* NCListeningMode.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DDE6D821237CE971009BE951 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDE6D822237CE981009BE951 /* ActionLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE6D820237CE88F009BE951 /* Preferences.storyboard in Resources */,
 				DD41F963237C8D5C00A1B976 /* Assets.xcassets in Resources */,
 				DD41F966237C8D5C00A1B976 /* Main.storyboard in Resources */,
 			);
@@ -330,10 +353,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE6D81C237CDF56009BE951 /* NoiseControlUIController.swift in Sources */,
+				DDE6D82C237CED20009BE951 /* SharedFileList.m in Sources */,
 				DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */,
 				DDE6D81E237CE18D009BE951 /* MenuBarUIController.swift in Sources */,
+				DDE6D825237CEA6C009BE951 /* PreferencesViewController.swift in Sources */,
 				DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */,
 				DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */,
+				DDE6D823237CE981009BE951 /* ActionLabel.swift in Sources */,
 				DD41F9A7237C9D8100A1B976 /* TouchBarUIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

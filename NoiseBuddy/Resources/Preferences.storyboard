@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="vEC-vv-neH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preferences View Controller-->
+        <scene sceneID="wdO-Oo-Bfc">
+            <objects>
+                <viewController id="vEC-vv-neH" customClass="PreferencesViewController" customModule="NoiseBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="zvt-e0-aNC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="199"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-0e-7eJ">
+                                <rect key="frame" x="20" y="117" width="181" height="62"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-bi-rj7">
+                                        <rect key="frame" x="-2" y="46" width="115" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qVm-rG-wkZ">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="launchAtLoginAction:" target="vEC-vv-neH" id="d60-dV-K6K"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-8y-5FS">
+                                        <rect key="frame" x="-2" y="22" width="182" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Enable button in Menu Bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="UTd-WO-uQd">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="menuBarEnabledAction:" target="vEC-vv-neH" id="wF3-7d-Pvh"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Osk-Ut-v5m">
+                                        <rect key="frame" x="-2" y="-2" width="185" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Enable button in Touch Bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="VYB-x5-f83">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="touchBarEnabledAction:" target="vEC-vv-neH" id="3in-zq-V6Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-Ie-FqK">
+                                <rect key="frame" x="20" y="20" width="262" height="38"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-sb-CkU">
+                                        <rect key="frame" x="0.0" y="23" width="245" height="15"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="luv-ew-V7p">
+                                                <rect key="frame" x="-2" y="0.0" width="172" height="15"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Made with ❤️ by Gui Rambo, " id="sXp-f9-PBC">
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3CS-rG-25h" customClass="ActionLabel" customModule="NoiseBuddy" customModuleProvider="target">
+                                                <rect key="frame" x="166" y="0.0" width="77" height="15"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="open-source" id="Z6T-M0-rne">
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <action selector="openRepositoryWebsite:" target="vEC-vv-neH" id="BmH-Es-sNO"/>
+                                                </connections>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mAv-un-LZl">
+                                                <rect key="frame" x="239" y="0.0" width="8" height="15"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="." id="x3q-1S-wFq">
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o8e-5Z-OAL">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="15"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cnz-WK-piJ">
+                                                <rect key="frame" x="-2" y="0.0" width="210" height="15"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="If you like this little utility, check out " id="opU-21-jfC">
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Gp-J9-5ck" customClass="ActionLabel" customModule="NoiseBuddy" customModuleProvider="target">
+                                                <rect key="frame" x="204" y="0.0" width="56" height="15"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="AirBuddy" id="hSj-PK-gqZ">
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <action selector="openAirBuddyWebsite:" target="vEC-vv-neH" id="KF6-7c-Akp"/>
+                                                </connections>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Itg-vd-oU7">
+                                                <rect key="frame" x="256" y="0.0" width="8" height="15"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="." id="OqS-CM-bCb">
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I1O-Ie-FqK" secondAttribute="trailing" constant="20" symbolic="YES" id="65W-Yy-2W3"/>
+                            <constraint firstItem="Ymr-0e-7eJ" firstAttribute="top" secondItem="zvt-e0-aNC" secondAttribute="top" constant="20" symbolic="YES" id="K98-Qj-JVE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ymr-0e-7eJ" secondAttribute="trailing" constant="20" symbolic="YES" id="Sq8-TA-Zgb"/>
+                            <constraint firstItem="I1O-Ie-FqK" firstAttribute="top" secondItem="Ymr-0e-7eJ" secondAttribute="bottom" constant="59" id="fX8-cd-Xsy"/>
+                            <constraint firstItem="I1O-Ie-FqK" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" id="jo8-KS-Orf"/>
+                            <constraint firstAttribute="bottom" secondItem="I1O-Ie-FqK" secondAttribute="bottom" constant="20" id="t5n-tc-GhD"/>
+                            <constraint firstItem="Ymr-0e-7eJ" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" symbolic="YES" id="uUb-Rb-0d8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="launchAtLoginButton" destination="3Gr-bi-rj7" id="2hf-iH-EOt"/>
+                        <outlet property="menuBarEnabledButton" destination="IcN-8y-5FS" id="GSE-yL-xCP"/>
+                        <outlet property="touchBarEnabledButton" destination="Osk-Ut-v5m" id="UWc-tL-vOk"/>
+                    </connections>
+                </viewController>
+                <customObject id="tX6-ul-a2Z" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="429.5"/>
+        </scene>
+    </scenes>
+</document>
