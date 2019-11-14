@@ -6,8 +6,8 @@ I wanted an easier way to change the listening mode settings on AirPods Pro and 
 
 You can customize where the button will appear by launching the app and changing the options in its settings screen.
 
-![screenshot-menubar]()(./screenshots/screenshot-menubar.png)
-![screenshot-touchbar]()(./screenshots/screenshot-touchbar.png)
+![screenshot-menubar](./screenshots/screenshot-menubar.png)
+![screenshot-touchbar](./screenshots/screenshot-touchbar.png)
 
 _AirPods, Touch Bar and Beats Solo Pro are trademarks of Apple Inc., registered in the U.S. and other countries. This app is not made by, affiliated with or endorsed by Apple._
 
