@@ -14,7 +14,7 @@ public enum NCListeningMode: String, CaseIterable {
     case transparency = "AVOutputDeviceBluetoothListeningModeAudioTransparency"
 }
 
-public extension NCListeningModeController {
+public extension NCListeningModeStatusProvider {
 
     var listeningMode: NCListeningMode {
         get {

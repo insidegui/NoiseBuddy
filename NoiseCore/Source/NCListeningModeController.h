@@ -12,7 +12,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NCListeningModeController : NSObject
+@protocol NCListeningModeStatusProvider <NSObject>
+
+- (void)startListeningForUpdates;
+
+@property (nonatomic, copy) void(^outputDeviceDidChange)(NCDevice *__nullable device);
+
+@property (nonatomic, readonly) NSArray <NSString *> *_availableListeningModes;
+@property (nonatomic, copy) NSString *_listeningMode;
+- (void)_setListeningMode:(NSString *)listeningMode;
+
+@end
+
+@interface NCListeningModeController : NSObject <NCListeningModeStatusProvider>
 
 - (void)startListeningForUpdates;
 

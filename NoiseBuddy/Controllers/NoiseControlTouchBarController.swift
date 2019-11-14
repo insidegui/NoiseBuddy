@@ -16,10 +16,10 @@ fileprivate extension NSTouchBarItem.Identifier {
 final class NoiseControlTouchBarController: NSObject {
 
     let preferences: Preferences
-    let listeningModeController: NCListeningModeController
+    let listeningModeController: NCListeningModeStatusProvider
     let item: NSCustomTouchBarItem
 
-    init(listeningModeController: NCListeningModeController,
+    init(listeningModeController: NCListeningModeStatusProvider,
          preferences: Preferences = .shared)
     {
         self.listeningModeController = listeningModeController

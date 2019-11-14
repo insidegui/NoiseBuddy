@@ -12,7 +12,13 @@ import NoiseCore
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private lazy var listeningModeController = NCListeningModeController()
+    private lazy var listeningModeController: NCListeningModeStatusProvider = {
+        if UserDefaults.standard.bool(forKey: "NBUseMockListeningModeController") {
+            return MockListeningModeController()
+        } else {
+            return NCListeningModeController()
+        }
+    }()
 
     private lazy var touchBarController: NoiseControlTouchBarController = {
         NoiseControlTouchBarController(listeningModeController: self.listeningModeController)

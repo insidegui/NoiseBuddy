@@ -25,6 +25,7 @@
 		DD41F9A7237C9D8100A1B976 /* NoiseControlTouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F9A6237C9D8100A1B976 /* NoiseControlTouchBarController.swift */; };
 		DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D813237CA05D009BE951 /* Preferences.swift */; };
 		DDE6D816237CA5E2009BE951 /* NCDevice-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */; };
+		DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DD41F9A6237C9D8100A1B976 /* NoiseControlTouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseControlTouchBarController.swift; sourceTree = "<group>"; };
 		DDE6D813237CA05D009BE951 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NCDevice-Private.h"; sourceTree = "<group>"; };
+		DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListeningModeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,15 +140,10 @@
 		DD41F98E237C911F00A1B976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DD41F991237C913E00A1B976 /* fishhook.c */,
-				DD41F992237C913E00A1B976 /* fishhook.h */,
-				DD41F98F237C913000A1B976 /* AVFoundation-Private.h */,
+				DDE6D818237CBAF3009BE951 /* Models */,
+				DDE6D817237CBAEB009BE951 /* Support */,
 				DD41F995237C915900A1B976 /* NCListeningModeController.h */,
 				DD41F996237C915900A1B976 /* NCListeningModeController.m */,
-				DD41F999237C928400A1B976 /* NCDevice.h */,
-				DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */,
-				DD41F99A237C928400A1B976 /* NCDevice.m */,
-				DD41F99D237C98B900A1B976 /* NCListeningMode.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -185,8 +182,30 @@
 			children = (
 				DD41F9A4237C9D0600A1B976 /* NSTouchBar-Private.h */,
 				DD41F9A5237C9D2900A1B976 /* BridgingHeader.h */,
+				DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		DDE6D817237CBAEB009BE951 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DD41F991237C913E00A1B976 /* fishhook.c */,
+				DD41F992237C913E00A1B976 /* fishhook.h */,
+				DD41F98F237C913000A1B976 /* AVFoundation-Private.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		DDE6D818237CBAF3009BE951 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD41F999237C928400A1B976 /* NCDevice.h */,
+				DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */,
+				DD41F99A237C928400A1B976 /* NCDevice.m */,
+				DD41F99D237C98B900A1B976 /* NCListeningMode.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD41F961237C8D5800A1B976 /* ViewController.swift in Sources */,
+				DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */,
 				DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */,
 				DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */,
 				DD41F9A7237C9D8100A1B976 /* NoiseControlTouchBarController.swift in Sources */,
