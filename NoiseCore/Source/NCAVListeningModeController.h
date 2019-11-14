@@ -1,5 +1,5 @@
 //
-//  NCListeningModeController.h
+//  NCAVListeningModeController.h
 //  NoiseCore
 //
 //  Created by Guilherme Rambo on 13/11/19.
@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface NCListeningModeController : NSObject <NCListeningModeStatusProvider>
+@interface NCAVListeningModeController : NSObject <NCListeningModeStatusProvider>
 
 - (void)startListeningForUpdates;
 

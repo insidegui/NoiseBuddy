@@ -1,12 +1,12 @@
 //
-//  NCListeningModeController.m
+//  NCAVListeningModeController.m
 //  NoiseCore
 //
 //  Created by Guilherme Rambo on 13/11/19.
 //  Copyright © 2019 Guilherme Rambo. All rights reserved.
 //
 
-#import "NCListeningModeController.h"
+#import "NCAVListeningModeController.h"
 
 @import AVFoundation;
 
@@ -44,7 +44,7 @@ static void hookAVFEntitlement() {
     rebind_symbols((struct rebinding[1]){"SecTaskCopyValueForEntitlement", my_SecTaskCopyValueForEntitlement, (void *)&orig_stcvfe}, 1);
 }
 
-@interface NCListeningModeController ()
+@interface NCAVListeningModeController ()
 
 @property (strong) os_log_t log;
 @property (strong) AVOutputContext *context;
@@ -55,14 +55,14 @@ static void hookAVFEntitlement() {
 
 @end
 
-@implementation NCListeningModeController
+@implementation NCAVListeningModeController
 
 + (instancetype)shared
 {
-    static NCListeningModeController *controller;
+    static NCAVListeningModeController *controller;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        controller = [NCListeningModeController new];
+        controller = [NCAVListeningModeController new];
     });
     return controller;
 }
@@ -71,7 +71,7 @@ static void hookAVFEntitlement() {
 {
     self = [super init];
 
-    self.log = os_log_create("codes.rambo.NoiseCore", "NCListeningModeController");
+    self.log = os_log_create("codes.rambo.NoiseCore", "NCAVListeningModeController");
 
     return self;
 }

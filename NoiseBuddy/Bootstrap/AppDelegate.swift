@@ -13,10 +13,14 @@ import NoiseCore
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func makeListeningModeController() -> NCListeningModeStatusProvider {
-        if UserDefaults.standard.bool(forKey: "NBUseMockListeningModeController") {
-            return MockListeningModeController()
-        } else {
-            return NCListeningModeController()
+        guard let arg = UserDefaults.standard.string(forKey: "NBListeningModeControllerType") else {
+            return NCAVListeningModeController()
+        }
+
+        switch arg {
+        case "bt": return NCBTListeningModeController()
+        case "mock": return MockListeningModeController()
+        default: return NCAVListeningModeController()
         }
     }
 

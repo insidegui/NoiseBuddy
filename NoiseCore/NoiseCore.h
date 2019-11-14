@@ -16,5 +16,6 @@ FOUNDATION_EXPORT const unsigned char NoiseCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <NoiseCore/PublicHeader.h>
 
-#import <NoiseCore/NCListeningModeController.h>
+#import <NoiseCore/IOBluetooth-Private.h>
+#import <NoiseCore/NCAVListeningModeController.h>
 #import <NoiseCore/NCDevice.h>

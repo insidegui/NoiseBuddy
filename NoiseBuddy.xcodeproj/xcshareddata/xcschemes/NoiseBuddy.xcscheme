@@ -52,7 +52,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-NBUseMockListeningModeController YES"
+            argument = "-NBListeningModeControllerType &quot;mock&quot;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument

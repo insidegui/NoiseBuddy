@@ -16,13 +16,15 @@
 		DD41F990237C913000A1B976 /* AVFoundation-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F98F237C913000A1B976 /* AVFoundation-Private.h */; };
 		DD41F993237C913E00A1B976 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = DD41F991237C913E00A1B976 /* fishhook.c */; };
 		DD41F994237C913E00A1B976 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F992237C913E00A1B976 /* fishhook.h */; };
-		DD41F997237C915900A1B976 /* NCListeningModeController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F995237C915900A1B976 /* NCListeningModeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD41F998237C915900A1B976 /* NCListeningModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD41F996237C915900A1B976 /* NCListeningModeController.m */; };
+		DD41F997237C915900A1B976 /* NCAVListeningModeController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F995237C915900A1B976 /* NCAVListeningModeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD41F998237C915900A1B976 /* NCAVListeningModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD41F996237C915900A1B976 /* NCAVListeningModeController.m */; };
 		DD41F99B237C928400A1B976 /* NCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F999237C928400A1B976 /* NCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD41F99C237C928400A1B976 /* NCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DD41F99A237C928400A1B976 /* NCDevice.m */; };
 		DD41F99E237C98B900A1B976 /* NCListeningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F99D237C98B900A1B976 /* NCListeningMode.swift */; };
 		DD41F9A7237C9D8100A1B976 /* TouchBarUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */; };
 		DD50DC44237CF43F00F5AEB3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DD50DC43237CF43F00F5AEB3 /* Credits.rtf */; };
+		DD50DC46237D91BE00F5AEB3 /* NCBTListeningModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50DC45237D91BE00F5AEB3 /* NCBTListeningModeController.swift */; };
+		DD50DC4A237D988400F5AEB3 /* IOBluetooth-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DD50DC49237D988100F5AEB3 /* IOBluetooth-Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D813237CA05D009BE951 /* Preferences.swift */; };
 		DDE6D816237CA5E2009BE951 /* NCDevice-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */; };
 		DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */; };
@@ -71,8 +73,8 @@
 		DD41F98F237C913000A1B976 /* AVFoundation-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVFoundation-Private.h"; sourceTree = "<group>"; };
 		DD41F991237C913E00A1B976 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		DD41F992237C913E00A1B976 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
-		DD41F995237C915900A1B976 /* NCListeningModeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCListeningModeController.h; sourceTree = "<group>"; };
-		DD41F996237C915900A1B976 /* NCListeningModeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCListeningModeController.m; sourceTree = "<group>"; };
+		DD41F995237C915900A1B976 /* NCAVListeningModeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCAVListeningModeController.h; sourceTree = "<group>"; };
+		DD41F996237C915900A1B976 /* NCAVListeningModeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCAVListeningModeController.m; sourceTree = "<group>"; };
 		DD41F999237C928400A1B976 /* NCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCDevice.h; sourceTree = "<group>"; };
 		DD41F99A237C928400A1B976 /* NCDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCDevice.m; sourceTree = "<group>"; };
 		DD41F99D237C98B900A1B976 /* NCListeningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCListeningMode.swift; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		DD41F9A5237C9D2900A1B976 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarUIController.swift; sourceTree = "<group>"; };
 		DD50DC43237CF43F00F5AEB3 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		DD50DC45237D91BE00F5AEB3 /* NCBTListeningModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCBTListeningModeController.swift; sourceTree = "<group>"; };
+		DD50DC49237D988100F5AEB3 /* IOBluetooth-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetooth-Private.h"; sourceTree = "<group>"; };
 		DDE6D813237CA05D009BE951 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NCDevice-Private.h"; sourceTree = "<group>"; };
 		DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListeningModeController.swift; sourceTree = "<group>"; };
@@ -156,8 +160,9 @@
 			children = (
 				DDE6D818237CBAF3009BE951 /* Models */,
 				DDE6D817237CBAEB009BE951 /* Support */,
-				DD41F995237C915900A1B976 /* NCListeningModeController.h */,
-				DD41F996237C915900A1B976 /* NCListeningModeController.m */,
+				DD41F995237C915900A1B976 /* NCAVListeningModeController.h */,
+				DD41F996237C915900A1B976 /* NCAVListeningModeController.m */,
+				DD50DC45237D91BE00F5AEB3 /* NCBTListeningModeController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				DD41F991237C913E00A1B976 /* fishhook.c */,
 				DD41F992237C913E00A1B976 /* fishhook.h */,
 				DD41F98F237C913000A1B976 /* AVFoundation-Private.h */,
+				DD50DC49237D988100F5AEB3 /* IOBluetooth-Private.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -243,7 +249,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD41F997237C915900A1B976 /* NCListeningModeController.h in Headers */,
+				DD41F997237C915900A1B976 /* NCAVListeningModeController.h in Headers */,
+				DD50DC4A237D988400F5AEB3 /* IOBluetooth-Private.h in Headers */,
 				DD41F990237C913000A1B976 /* AVFoundation-Private.h in Headers */,
 				DD41F985237C911A00A1B976 /* NoiseCore.h in Headers */,
 				DD41F99B237C928400A1B976 /* NCDevice.h in Headers */,
@@ -374,7 +381,8 @@
 			files = (
 				DD41F993237C913E00A1B976 /* fishhook.c in Sources */,
 				DD41F99C237C928400A1B976 /* NCDevice.m in Sources */,
-				DD41F998237C915900A1B976 /* NCListeningModeController.m in Sources */,
+				DD41F998237C915900A1B976 /* NCAVListeningModeController.m in Sources */,
+				DD50DC46237D91BE00F5AEB3 /* NCBTListeningModeController.swift in Sources */,
 				DD41F99E237C98B900A1B976 /* NCListeningMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,11 +604,19 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					BluetoothAudio,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.NoiseCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/System/Library/PrivateFrameworks,
+				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -624,10 +640,18 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					BluetoothAudio,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = codes.rambo.NoiseCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/System/Library/PrivateFrameworks,
+				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
