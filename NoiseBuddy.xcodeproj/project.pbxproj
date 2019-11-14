@@ -21,10 +21,12 @@
 		DD41F99B237C928400A1B976 /* NCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F999237C928400A1B976 /* NCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD41F99C237C928400A1B976 /* NCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DD41F99A237C928400A1B976 /* NCDevice.m */; };
 		DD41F99E237C98B900A1B976 /* NCListeningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F99D237C98B900A1B976 /* NCListeningMode.swift */; };
-		DD41F9A7237C9D8100A1B976 /* NoiseControlTouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F9A6237C9D8100A1B976 /* NoiseControlTouchBarController.swift */; };
+		DD41F9A7237C9D8100A1B976 /* TouchBarUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */; };
 		DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D813237CA05D009BE951 /* Preferences.swift */; };
 		DDE6D816237CA5E2009BE951 /* NCDevice-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */; };
 		DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */; };
+		DDE6D81C237CDF56009BE951 /* NoiseControlUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */; };
+		DDE6D81E237CE18D009BE951 /* MenuBarUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +73,12 @@
 		DD41F99D237C98B900A1B976 /* NCListeningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCListeningMode.swift; sourceTree = "<group>"; };
 		DD41F9A4237C9D0600A1B976 /* NSTouchBar-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTouchBar-Private.h"; sourceTree = "<group>"; };
 		DD41F9A5237C9D2900A1B976 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		DD41F9A6237C9D8100A1B976 /* NoiseControlTouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseControlTouchBarController.swift; sourceTree = "<group>"; };
+		DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarUIController.swift; sourceTree = "<group>"; };
 		DDE6D813237CA05D009BE951 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		DDE6D815237CA5E2009BE951 /* NCDevice-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NCDevice-Private.h"; sourceTree = "<group>"; };
 		DDE6D819237CBC8A009BE951 /* MockListeningModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListeningModeController.swift; sourceTree = "<group>"; };
+		DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseControlUIController.swift; sourceTree = "<group>"; };
+		DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarUIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +172,9 @@
 		DD41F9A1237C9CEE00A1B976 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD41F9A6237C9D8100A1B976 /* NoiseControlTouchBarController.swift */,
+				DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */,
+				DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */,
+				DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */,
 				DDE6D813237CA05D009BE951 /* Preferences.swift */,
 			);
 			path = Controllers;
@@ -323,10 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE6D81C237CDF56009BE951 /* NoiseControlUIController.swift in Sources */,
 				DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */,
+				DDE6D81E237CE18D009BE951 /* MenuBarUIController.swift in Sources */,
 				DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */,
 				DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */,
-				DD41F9A7237C9D8100A1B976 /* NoiseControlTouchBarController.swift in Sources */,
+				DD41F9A7237C9D8100A1B976 /* TouchBarUIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

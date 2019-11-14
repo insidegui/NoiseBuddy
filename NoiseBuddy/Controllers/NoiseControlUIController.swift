@@ -1,5 +1,5 @@
 //
-//  NoiseControlTouchBarController.swift
+//  NoiseControlUIController.swift
 //  NoiseBuddy
 //
 //  Created by Guilherme Rambo on 13/11/19.
@@ -9,57 +9,41 @@
 import Cocoa
 import NoiseCore
 
-fileprivate extension NSTouchBarItem.Identifier {
-    static let noiseControl = NSTouchBarItem.Identifier("codes.rambo.NoiseBuddy")
-}
-
-final class NoiseControlTouchBarController: NSObject {
+class NoiseControlUIController: NSObject {
 
     let preferences: Preferences
     let listeningModeController: NCListeningModeStatusProvider
-    let item: NSCustomTouchBarItem
 
     init(listeningModeController: NCListeningModeStatusProvider, preferences: Preferences)
     {
         self.listeningModeController = listeningModeController
         self.preferences = preferences
 
-        let customItem = NSCustomTouchBarItem(identifier: .noiseControl)
-        customItem.customizationLabel = "Listening Mode"
-
-        self.item = customItem
-
         super.init()
     }
 
-    private lazy var button: NSButton = {
-        NSButton(image: NSImage(), target: self, action: #selector(tappedNoiseControlItem))
-    }()
+    func configureUI() {
+        assertionFailure("Subclasses must override configureUI and not call super")
+    }
 
     func install() {
-        item.view = button
-
-        NSTouchBarItem.addSystemTrayItem(item)
-
-        DFRSystemModalShowsCloseBoxWhenFrontMost(true)
-
+        configureUI()
+        
         listeningModeController.outputDeviceDidChange = { [weak self] device in
             self?.handleDeviceDidChange(device)
         }
 
         listeningModeController.startListeningForUpdates()
-
-        NotificationCenter.default.addObserver(forName: Preferences.didChangeNotification, object: preferences, queue: .main) { [weak self] _ in
-            self?.reevaluateVisibility()
-        }
     }
 
-    private func shouldShow(for device: NCDevice?) -> Bool {
+    var isEnabled: Bool { fatalError("Subclasses must override isEnabled and not call super") }
+
+    func shouldShow(for device: NCDevice?) -> Bool {
         guard let device = device else { return false }
-        return device.supportsListeningModes && preferences.touchBarEnabled
+        return device.supportsListeningModes && isEnabled
     }
 
-    private var currentDevice: NCDevice?
+    private(set) var currentDevice: NCDevice?
 
     private func handleDeviceDidChange(_ device: NCDevice?) {
         defer { reevaluateVisibility() }
@@ -69,21 +53,21 @@ final class NoiseControlTouchBarController: NSObject {
         guard let device = device else { return }
 
         handleListeningModeDidChange(device)
-        
+
         device.listeningModeDidChange = { [weak self] inDevice in
             self?.handleListeningModeDidChange(inDevice)
         }
     }
 
-    private func reevaluateVisibility() {
-        DFRElementSetControlStripPresenceForIdentifier(.noiseControl, shouldShow(for: currentDevice))
+    func reevaluateVisibility() {
+        assertionFailure("Subclasses must override reevaluateVisibility and not call super")
     }
 
-    private func handleListeningModeDidChange(_ device: NCDevice) {
-        button.image = device.listeningMode.image
+    func handleListeningModeDidChange(_ device: NCDevice) {
+        assertionFailure("Subclasses must override handleListeningModeDidChange and not call super")
     }
 
-    @objc private func tappedNoiseControlItem(_ sender: NSButton) {
+    @objc func toggleNoiseControlMode(_ sender: Any) {
         let nextMode = preferences.nextListeningMode(from: listeningModeController.listeningMode)
 
         listeningModeController.listeningMode = nextMode
@@ -91,7 +75,7 @@ final class NoiseControlTouchBarController: NSObject {
 
 }
 
-fileprivate extension Preferences {
+extension Preferences {
 
     func nextListeningMode(from currentMode: NCListeningMode) -> NCListeningMode {
         let fallbackMode = listeningModes.first ?? currentMode
@@ -106,12 +90,11 @@ fileprivate extension Preferences {
 
 }
 
-fileprivate extension NCListeningMode {
-    var image: NSImage? {
-        NSImage(named: NSImage.Name(rawValue))
-    }
+extension NCListeningMode {
+    var touchBarImage: NSImage? { NSImage(named: NSImage.Name(rawValue)) }
+    var menuBarImage: NSImage? { NSImage(named: NSImage.Name("\(rawValue)-menu")) }
 }
 
-fileprivate extension NCDevice {
+extension NCDevice {
     var supportsListeningModes: Bool { availableListeningModes.count > 1 }
 }

@@ -12,19 +12,26 @@ import NoiseCore
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private lazy var listeningModeController: NCListeningModeStatusProvider = {
+    private func makeListeningModeController() -> NCListeningModeStatusProvider {
         if UserDefaults.standard.bool(forKey: "NBUseMockListeningModeController") {
             return MockListeningModeController()
         } else {
             return NCListeningModeController()
         }
-    }()
+    }
 
     private lazy var preferences = Preferences()
 
-    private lazy var touchBarController: NoiseControlTouchBarController = {
-        NoiseControlTouchBarController(
-            listeningModeController: self.listeningModeController,
+    private lazy var touchBarController: TouchBarUIController = {
+        TouchBarUIController(
+            listeningModeController: self.makeListeningModeController(),
+            preferences: self.preferences
+        )
+    }()
+
+    private lazy var menuBarController: MenuBarUIController = {
+        MenuBarUIController(
+            listeningModeController: self.makeListeningModeController(),
             preferences: self.preferences
         )
     }()
@@ -33,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preferences.register()
 
         touchBarController.install()
+        menuBarController.install()
     }
 
 }
