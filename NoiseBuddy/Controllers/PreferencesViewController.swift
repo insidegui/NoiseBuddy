@@ -7,12 +7,24 @@
 //
 
 import Cocoa
+import Carbon.HIToolbox
 
 class PreferencesViewController: NSViewController {
 
     @IBOutlet weak var launchAtLoginButton: NSButton!
     @IBOutlet weak var menuBarEnabledButton: NSButton!
     @IBOutlet weak var touchBarEnabledButton: NSButton!
+    @IBOutlet weak var toggleKeyboardShortcutEnabledButton: NSButton!
+
+    @IBOutlet weak var keyboardShortcutToggleModeButton: NSButton!
+
+    var isListening = false {
+        didSet {
+                DispatchQueue.main.async { [weak self] in
+                    self?.keyboardShortcutToggleModeButton.isHighlighted.toggle()
+                }
+            }
+    }
 
     private var preferences: Preferences!
 
@@ -37,6 +49,14 @@ class PreferencesViewController: NSViewController {
         NSFunctionRow.isDynamicFunctionRowAvailable() && !UserDefaults.standard.bool(forKey: "NBSimulateDFRNotAvailable")
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+            return nil
+        }
+    }
+
     override func viewWillAppear() {
         super.viewWillAppear()
 
@@ -49,6 +69,9 @@ class PreferencesViewController: NSViewController {
         launchAtLoginButton.state = preferences.launchAtLoginEnabled ? .on : .off
         menuBarEnabledButton.state = preferences.menuBarEnabled ? .on : .off
         touchBarEnabledButton.state = preferences.touchBarEnabled ? .on : .off
+        toggleKeyboardShortcutEnabledButton.state = preferences.keyboardShortcutToggleEnabled ? .on : .off
+        keyboardShortcutToggleModeButton.isEnabled = preferences.keyboardShortcutToggleEnabled
+        keyboardShortcutToggleModeButton.title = preferences.keyboardShortcut?.title ?? "Record Shortcut"
     }
 
     @IBAction func launchAtLoginAction(_ sender: NSButton) {
@@ -63,14 +86,54 @@ class PreferencesViewController: NSViewController {
         preferences.touchBarEnabled = sender.state == .on
     }
 
+    @IBAction func keyboardShortcutToggleEnabledAction(_ sender: NSButton) {
+        preferences.keyboardShortcutToggleEnabled = sender.state == .on
+        keyboardShortcutToggleModeButton.isEnabled = sender.state == .on ? true : false
+    }
+    
+    @IBAction func toggleAirPodsProModeAction(_ sender: NSButton) {
+        isListening = true
+        preferences.keyboardShortcutPause = true
+        view.window?.makeFirstResponder(nil)
+    }
+
     @IBAction func openRepositoryWebsite(_ sender: ActionLabel) {
         let url = URL(string: "https://github.com/insidegui/NoiseBuddy")!
         NSWorkspace.shared.open(url)
     }
-
+    
     @IBAction func openAirBuddyWebsite(_ sender: ActionLabel) {
         let url = URL(string: "https://airbuddy.app")!
         NSWorkspace.shared.open(url)
     }
-
+    
+    func updateGlobalShortcut(_ event : NSEvent) {
+        self.isListening = false
+        
+        if let characters = event.charactersIgnoringModifiers {
+            updateKeybindButton(with: characters)
+        }
+    }
+    
+    func updateKeybindButton(with shortcut: String) {
+        keyboardShortcutToggleModeButton.title = shortcut
+    }
+    
+    override func keyDown(with event: NSEvent) {
+        if isListening == false { return }
+        defer {
+            isListening = false
+            preferences.keyboardShortcutPause = false
+        }
+        
+        if Int(event.keyCode) == kVK_Escape { return }
+    
+        keyboardShortcutToggleModeButton.title = event.modifierFlags.description + event.charactersIgnoringModifiers!.description.uppercased()
+        
+        guard let key = event.charactersIgnoringModifiers?.description.uppercased() else { return }
+        
+        let newShortcut = KeyBoardShortcut(eventCode: UInt32(event.keyCode), modifier: event.modifierFlags.carbonFlags, title: event.modifierFlags.description + key)
+        preferences.keyboardShortcut = newShortcut
+  
+    }
 }
