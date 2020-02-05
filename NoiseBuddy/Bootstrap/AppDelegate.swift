@@ -77,9 +77,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var activationCount = 0
 
     func applicationDidBecomeActive(_ notification: Notification) {
-        if activationCount > 1 { showPreferences(self) }
+        if activationCount > 0 { showPreferences(self) }
 
         activationCount += 1
+
+        DispatchQueue.main.async {
+            NSApp.activate(ignoringOtherApps: false)
+        }
     }
 
 }
