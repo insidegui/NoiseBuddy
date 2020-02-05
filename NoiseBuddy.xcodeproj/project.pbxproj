@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A27F172385A94E00F7C0CC /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 01A27F162385A94E00F7C0CC /* HotKey */; };
+		01A27F1C2385BC9600F7C0CC /* KeyboardShortcutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A27F1B2385BC9500F7C0CC /* KeyboardShortcutController.swift */; };
+		01A27F1F2386F14200F7C0CC /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A27F1E2386F14200F7C0CC /* UserDefaults+Codable.swift */; };
+		01A27F222386F16C00F7C0CC /* KeyBoardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A27F212386F16C00F7C0CC /* KeyBoardShortcut.swift */; };
+		01C57A052384C9ED003B0934 /* NoiseCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD41F981237C911A00A1B976 /* NoiseCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41F95E237C8D5800A1B976 /* AppDelegate.swift */; };
 		DD41F963237C8D5C00A1B976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD41F962237C8D5C00A1B976 /* Assets.xcassets */; };
 		DD41F966237C8D5C00A1B976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD41F964237C8D5C00A1B976 /* Main.storyboard */; };
 		DD41F985237C911A00A1B976 /* NoiseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F983237C911A00A1B976 /* NoiseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD41F988237C911A00A1B976 /* NoiseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD41F981237C911A00A1B976 /* NoiseCore.framework */; };
-		DD41F989237C911A00A1B976 /* NoiseCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD41F981237C911A00A1B976 /* NoiseCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD41F990237C913000A1B976 /* AVFoundation-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F98F237C913000A1B976 /* AVFoundation-Private.h */; };
 		DD41F993237C913E00A1B976 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = DD41F991237C913E00A1B976 /* fishhook.c */; };
 		DD41F994237C913E00A1B976 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = DD41F992237C913E00A1B976 /* fishhook.h */; };
@@ -36,24 +39,23 @@
 		DDE6D82C237CED20009BE951 /* SharedFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6D82A237CED20009BE951 /* SharedFileList.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DD41F986237C911A00A1B976 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD41F953237C8D5800A1B976 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD41F980237C911A00A1B976;
-			remoteInfo = NoiseCore;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
+		01C57A042384C9E5003B0934 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				01C57A052384C9ED003B0934 /* NoiseCore.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD41F98D237C911A00A1B976 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DD41F989237C911A00A1B976 /* NoiseCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +63,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01A27F1B2385BC9500F7C0CC /* KeyboardShortcutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutController.swift; sourceTree = "<group>"; };
+		01A27F1E2386F14200F7C0CC /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		01A27F212386F16C00F7C0CC /* KeyBoardShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardShortcut.swift; sourceTree = "<group>"; };
 		DD41F95B237C8D5800A1B976 /* NoiseBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoiseBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41F95E237C8D5800A1B976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD41F962237C8D5C00A1B976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD41F988237C911A00A1B976 /* NoiseCore.framework in Frameworks */,
+				01A27F172385A94E00F7C0CC /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A27F1D2386F11E00F7C0CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01A27F1E2386F14200F7C0CC /* UserDefaults+Codable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01A27F202386F16100F7C0CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01A27F212386F16C00F7C0CC /* KeyBoardShortcut.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DD41F952237C8D5800A1B976 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +161,8 @@
 				DD41F99F237C9AC500A1B976 /* Bootstrap */,
 				DD41F9A0237C9CCE00A1B976 /* Resources */,
 				DD41F9A2237C9CF400A1B976 /* Support */,
+				01A27F202386F16100F7C0CC /* Models */,
+				01A27F1D2386F11E00F7C0CC /* Extensions */,
 				DD41F9A1237C9CEE00A1B976 /* Controllers */,
 			);
 			path = NoiseBuddy;
@@ -194,6 +217,7 @@
 				DDE6D81B237CDF56009BE951 /* NoiseControlUIController.swift */,
 				DD41F9A6237C9D8100A1B976 /* TouchBarUIController.swift */,
 				DDE6D81D237CE18D009BE951 /* MenuBarUIController.swift */,
+				01A27F1B2385BC9500F7C0CC /* KeyboardShortcutController.swift */,
 				DDE6D824237CEA6C009BE951 /* PreferencesViewController.swift */,
 			);
 			path = Controllers;
@@ -270,13 +294,16 @@
 				DD41F958237C8D5800A1B976 /* Frameworks */,
 				DD41F959237C8D5800A1B976 /* Resources */,
 				DD41F98D237C911A00A1B976 /* Embed Frameworks */,
+				01C57A042384C9E5003B0934 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD41F987237C911A00A1B976 /* PBXTargetDependency */,
 			);
 			name = NoiseBuddy;
+			packageProductDependencies = (
+				01A27F162385A94E00F7C0CC /* HotKey */,
+			);
 			productName = NoiseBuddy;
 			productReference = DD41F95B237C8D5800A1B976 /* NoiseBuddy.app */;
 			productType = "com.apple.product-type.application";
@@ -327,6 +354,9 @@
 				Base,
 			);
 			mainGroup = DD41F952237C8D5800A1B976;
+			packageReferences = (
+				01A27F152385A94E00F7C0CC /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = DD41F95C237C8D5800A1B976 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,14 +393,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A27F1C2385BC9600F7C0CC /* KeyboardShortcutController.swift in Sources */,
 				DDE6D81C237CDF56009BE951 /* NoiseControlUIController.swift in Sources */,
 				DDE6D82C237CED20009BE951 /* SharedFileList.m in Sources */,
 				DDE6D81A237CBC8A009BE951 /* MockListeningModeController.swift in Sources */,
 				DDE6D81E237CE18D009BE951 /* MenuBarUIController.swift in Sources */,
+				01A27F1F2386F14200F7C0CC /* UserDefaults+Codable.swift in Sources */,
 				DDE6D825237CEA6C009BE951 /* PreferencesViewController.swift in Sources */,
 				DD41F95F237C8D5800A1B976 /* AppDelegate.swift in Sources */,
 				DDE6D814237CA05D009BE951 /* Preferences.swift in Sources */,
 				DDE6D823237CE981009BE951 /* ActionLabel.swift in Sources */,
+				01A27F222386F16C00F7C0CC /* KeyBoardShortcut.swift in Sources */,
 				DD41F9A7237C9D8100A1B976 /* TouchBarUIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,14 +421,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DD41F987237C911A00A1B976 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD41F980237C911A00A1B976 /* NoiseCore */;
-			targetProxy = DD41F986237C911A00A1B976 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD41F964237C8D5C00A1B976 /* Main.storyboard */ = {
@@ -527,9 +552,9 @@
 		DD41F96C237C8D5C00A1B976 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NoiseBuddy/Resources/NoiseBuddy.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -539,6 +564,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					DFRFoundation,
@@ -558,9 +584,9 @@
 		DD41F96D237C8D5C00A1B976 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NoiseBuddy/Resources/NoiseBuddy.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -570,6 +596,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					DFRFoundation,
@@ -688,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01A27F152385A94E00F7C0CC /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01A27F162385A94E00F7C0CC /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01A27F152385A94E00F7C0CC /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD41F953237C8D5800A1B976 /* Project object */;
 }

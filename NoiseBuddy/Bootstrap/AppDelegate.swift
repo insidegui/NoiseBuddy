@@ -39,6 +39,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             preferences: self.preferences
         )
     }()
+    
+    private lazy var keyboardShortcutController: KeyboardShortcutController = {
+        KeyboardShortcutController(
+            listeningModeController: self.makeListeningModeController(),
+            preferences: self.preferences
+        )
+    }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         preferences.register()
@@ -46,6 +53,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         touchBarController.install()
         menuBarController.install()
 
+        keyboardShortcutController.setup()
+        
         if !preferences.hasLaunchedBefore || UserDefaults.standard.bool(forKey: "NBShowPreferences") {
             preferences.hasLaunchedBefore = true
             showPreferences(self)

@@ -9,12 +9,12 @@
         <scene sceneID="wdO-Oo-Bfc">
             <objects>
                 <viewController id="vEC-vv-neH" customClass="PreferencesViewController" customModule="NoiseBuddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="zvt-e0-aNC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="222"/>
+                    <view key="view" misplaced="YES" id="zvt-e0-aNC">
+                        <rect key="frame" x="0.0" y="0.0" width="487" height="264"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-0e-7eJ">
-                                <rect key="frame" x="20" y="140" width="181" height="62"/>
+                                <rect key="frame" x="20" y="190" width="181" height="62"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-bi-rj7">
                                         <rect key="frame" x="-2" y="46" width="115" height="18"/>
@@ -64,7 +64,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-y9-LcD" customClass="ActionLabel" customModule="NoiseBuddy" customModuleProvider="target">
                                         <rect key="frame" x="-2" y="46" width="38" height="15"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="About" id="IXc-8F-ChU">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="label" size="12"/>
                                             <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -78,7 +78,7 @@
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="luv-ew-V7p">
                                                 <rect key="frame" x="-2" y="0.0" width="172" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Made with ❤️ by Gui Rambo, " id="sXp-f9-PBC">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="label" size="12"/>
                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -86,7 +86,7 @@
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3CS-rG-25h" customClass="ActionLabel" customModule="NoiseBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="166" y="0.0" width="77" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="open-source" id="Z6T-M0-rne">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="label" size="12"/>
                                                     <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -97,7 +97,7 @@
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mAv-un-LZl">
                                                 <rect key="frame" x="239" y="0.0" width="8" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="." id="x3q-1S-wFq">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="label" size="12"/>
                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -120,7 +120,7 @@
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cnz-WK-piJ">
                                                 <rect key="frame" x="-2" y="0.0" width="210" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="If you like this little utility, check out " id="opU-21-jfC">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="label" size="12"/>
                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -128,7 +128,7 @@
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Gp-J9-5ck" customClass="ActionLabel" customModule="NoiseBuddy" customModuleProvider="target">
                                                 <rect key="frame" x="204" y="0.0" width="56" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="AirBuddy" id="hSj-PK-gqZ">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="label" size="12"/>
                                                     <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -139,7 +139,7 @@
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Itg-vd-oU7">
                                                 <rect key="frame" x="256" y="0.0" width="8" height="15"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="." id="OqS-CM-bCb">
-                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <font key="font" metaFont="label" size="12"/>
                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -168,26 +168,67 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="445-B9-Hb1">
+                                <rect key="frame" x="20" y="107" width="351" height="43"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rTE-7r-fVH">
+                                        <rect key="frame" x="-2" y="27" width="351" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Toggle Between Noise Cancellation and Transparency " bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gSx-t3-xDE">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="keyboardShortcutToggleEnabledAction:" target="vEC-vv-neH" id="or1-CZ-yx4"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zxZ-s4-bME">
+                                        <rect key="frame" x="-6" y="-7" width="134" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="1ik-Fs-1PV"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Record Shortcut" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XE6-ht-Ikm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleAirPodsProModeAction:" target="vEC-vv-neH" id="HDT-V8-YvR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I1O-Ie-FqK" secondAttribute="trailing" constant="20" symbolic="YES" id="65W-Yy-2W3"/>
+                            <constraint firstItem="445-B9-Hb1" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" id="7IM-nP-23x"/>
+                            <constraint firstItem="I1O-Ie-FqK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="445-B9-Hb1" secondAttribute="bottom" constant="26" id="BjS-Fe-gg5"/>
                             <constraint firstItem="Ymr-0e-7eJ" firstAttribute="top" secondItem="zvt-e0-aNC" secondAttribute="top" constant="20" symbolic="YES" id="K98-Qj-JVE"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ymr-0e-7eJ" secondAttribute="trailing" constant="20" symbolic="YES" id="Sq8-TA-Zgb"/>
-                            <constraint firstItem="I1O-Ie-FqK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ymr-0e-7eJ" secondAttribute="bottom" constant="42" id="fX8-cd-Xsy"/>
+                            <constraint firstAttribute="trailing" secondItem="445-B9-Hb1" secondAttribute="trailing" constant="116" id="ePc-I3-Fla"/>
+                            <constraint firstItem="445-B9-Hb1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ymr-0e-7eJ" secondAttribute="bottom" constant="40" id="ijz-57-zJc"/>
                             <constraint firstItem="I1O-Ie-FqK" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" id="jo8-KS-Orf"/>
                             <constraint firstAttribute="bottom" secondItem="I1O-Ie-FqK" secondAttribute="bottom" constant="20" id="t5n-tc-GhD"/>
                             <constraint firstItem="Ymr-0e-7eJ" firstAttribute="leading" secondItem="zvt-e0-aNC" secondAttribute="leading" constant="20" symbolic="YES" id="uUb-Rb-0d8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="keyboardShortcutToggleModeButton" destination="zxZ-s4-bME" id="1Kw-xT-si0"/>
                         <outlet property="launchAtLoginButton" destination="3Gr-bi-rj7" id="2hf-iH-EOt"/>
                         <outlet property="menuBarEnabledButton" destination="IcN-8y-5FS" id="GSE-yL-xCP"/>
+                        <outlet property="toggleKeyboardShortcutEnabledButton" destination="rTE-7r-fVH" id="EmA-5m-6bg"/>
                         <outlet property="touchBarEnabledButton" destination="Osk-Ut-v5m" id="UWc-tL-vOk"/>
                     </connections>
                 </viewController>
                 <customObject id="tX6-ul-a2Z" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-61" y="429.5"/>
+            <point key="canvasLocation" x="-57.5" y="450"/>
         </scene>
     </scenes>
 </document>

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD41F95A237C8D5800A1B976"
-               BuildableName = "NoiseBuddy.app"
-               BlueprintName = "NoiseBuddy"
+               BlueprintIdentifier = "DD41F980237C911A00A1B976"
+               BuildableName = "NoiseCore.framework"
+               BlueprintName = "NoiseCore"
                ReferencedContainer = "container:NoiseBuddy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,30 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD41F95A237C8D5800A1B976"
-            BuildableName = "NoiseBuddy.app"
-            BlueprintName = "NoiseBuddy"
-            ReferencedContainer = "container:NoiseBuddy.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-NBListeningModeControllerType &quot;mock&quot;"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "-NBSimulateDFRNotAvailable YES"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "-NBShowPreferences YES"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -71,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD41F95A237C8D5800A1B976"
-            BuildableName = "NoiseBuddy.app"
-            BlueprintName = "NoiseBuddy"
+            BlueprintIdentifier = "DD41F980237C911A00A1B976"
+            BuildableName = "NoiseCore.framework"
+            BlueprintName = "NoiseCore"
             ReferencedContainer = "container:NoiseBuddy.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -26,7 +26,9 @@ final class Preferences {
                 NCListeningMode.transparency.rawValue
             ],
             "menuBarEnabled": true,
-            "touchBarEnabled": true
+            "touchBarEnabled": true,
+            "keyboardShortcutToggleEnabled": false,
+            "keyboardShortcutPause": false
         ])
     }
 
@@ -51,6 +53,30 @@ final class Preferences {
         get { defaults.bool(forKey: #function) }
         set {
             defaults.set(newValue, forKey: #function)
+            didChange()
+        }
+    }
+    
+    var keyboardShortcutToggleEnabled: Bool {
+        get { defaults.bool(forKey: #function) }
+        set {
+            defaults.set(newValue, forKey: #function)
+            didChange()
+        }
+    }
+    
+    var keyboardShortcutPause: Bool {
+        get { defaults.bool(forKey: #function) }
+        set {
+            defaults.set(newValue, forKey: #function)
+            didChange()
+        }
+    }
+    
+    var keyboardShortcut: KeyBoardShortcut? {
+        get { defaults.codable(forKey: #function) }
+        set {
+            defaults.setEncode(newValue, forKey: #function)
             didChange()
         }
     }
