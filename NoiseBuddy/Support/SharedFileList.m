@@ -63,7 +63,9 @@ void sharedFileListDidChange(LSSharedFileListRef inList, void *context);
         CFURLRef currentItemURL = NULL;
         LSSharedFileListItemResolve(item, resolutionFlags, &currentItemURL, NULL);
         NSURL *itemURL = CFBridgingRelease(currentItemURL);
-        [snapshot addObject:itemURL];
+        if (itemURL != nil) {
+            [snapshot addObject:itemURL];
+        }
     }
     
     return snapshot;
