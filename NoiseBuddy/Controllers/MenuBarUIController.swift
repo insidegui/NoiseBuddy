@@ -38,6 +38,7 @@ final class MenuBarUIController: NoiseControlUIController {
 
     override func handleListeningModeDidChange(_ device: NCDevice) {
         item?.button?.image = device.listeningMode.menuBarImage
+        item?.button?.toolTip = currentDevice?.tooltip
     }
 
     override func handleDeviceDidChange(_ device: NCDevice?) {
