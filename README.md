@@ -1,6 +1,6 @@
-![icon](./screenshots/NoiseBuddyIcon.png)
-
 # NoiseBuddy
+
+**NOTE: This project doesn't work in recent versions of macOS. Similar functionality is available as part of [AirBuddy](https://airbuddy.app)**
 
 Change noise cancelling settings on your AirPods Pro or Beats Solo Pro directly from your Mac's Menu Bar or Touch Bar.
 
